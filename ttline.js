@@ -1,31 +1,54 @@
 var config = require('./config.json');
 var extSequence = [];
 var extSequenceNames = [];
-var recursyLevel = 0;
+var recursionLevel = 0;
 var cursorNamesRegistry = {};
-var algorythmComplexity = 0;
+var algorithmComplexity = 0;
 var complexityMode = 0;
+var maxExperimentRepeats = 1000;
+
+MODE_START_FROM_DEPENDENCY_INDEX = 0;
+MODE_START_FROM_EXTENSIONS_GLOBAL_OFFSET = 1;
 
 function clear() {
     config = require('./config.json');
     extSequence = [];
     extSequenceNames = [];
-    recursyLevel = 0;
+    recursionLevel = 0;
     cursorNamesRegistry = {};
-    algorythmComplexity = 0;
+    algorithmComplexity = 0;
 }
 
 function getBeforePrefix() {
     var beforeNeedPrefix = '- ';
-    for (var rl = 0; rl < recursyLevel; rl ++) {
+    for (var rl = 0; rl < recursionLevel; rl ++) {
         beforeNeedPrefix = '    ' + beforeNeedPrefix;
     }
 
     return beforeNeedPrefix;
 }
 
+var currentProgressChar = '[-]';
+function getProgressChar() {
+    switch (currentProgressChar) {
+        case '[-]':
+            currentProgressChar = '[\\]';
+            break;
+        case '[\\]':
+            currentProgressChar = '[|]';
+            break;
+        case '[|]':
+            currentProgressChar = '[/]';
+            break;
+        case '[/]':
+            currentProgressChar = '[-]';
+            break;
+    }
+    return currentProgressChar;
+}
+
 function addSeq(i, extName) {
-    var exists = false
+    var exists = false;
 
     for (var extIndex=0; extIndex < extSequence.length; extIndex ++) {
         if (i === extSequence[extIndex]) {
@@ -61,35 +84,36 @@ function rd(startFrom, muted) {
                 !muted && console.log(getBeforePrefix() + 'DEPENDENCY NEED: ', afterName);
                 if (cursorNamesRegistry[afterName]) {
                     !muted && console.log(getBeforePrefix() + 'ALREADY REGISTERED! CONTINUE...');
-                    algorythmComplexity++;
+                    algorithmComplexity++;
                     continue;
                 } else {
                     !muted && console.log(getBeforePrefix() + '>> ' + ext.name + ' REGISTERED <<');
                     cursorNamesRegistry[afterName] = true;
-                    algorythmComplexity++;
+                    algorithmComplexity++;
                 }
-                var afterIndex = depIndexByName(afterName, config.extensions);
-                recursyLevel++;
-                if (recursyLevel > 10) {
+                recursionLevel++;
+                if (recursionLevel > 10) {
+                    recursionLevel--;
+                    continue;
                     throw new Error(getBeforePrefix() + 'Max Recursy Level Reached');
                 }
                 // afterIndex has less iterations than i+1
-                if (complexityMode == 0) {
+                if (complexityMode == MODE_START_FROM_DEPENDENCY_INDEX) {
+                    var afterIndex = depIndexByName(afterName, config.extensions);
                     rd(afterIndex, muted);
-                    algorythmComplexity++;
-                } else {
+                    algorithmComplexity++;
+                } else if (complexityMode == MODE_START_FROM_EXTENSIONS_GLOBAL_OFFSET) {
                     rd(i + 1, muted);
-                    algorythmComplexity++;
+                    algorithmComplexity++;
                 }
-                recursyLevel--;
+                recursionLevel--;
             }
 
-            // AFTER - means that first of all `after` and then Current
             addSeq(i, extName);
         } else {
             addSeq(i, extName);
         }
-        algorythmComplexity++;
+        algorithmComplexity++;
     }
 }
 
@@ -141,35 +165,49 @@ function depIndexByName(name, deps) {
             depsIndexes[name] = i;
             return i;
         }
+        algorithmComplexity++
     }
 
     return -1;
 }
 
-complexityMode = 1;
+complexityMode = 0;
 normalizeDeps(0);
 console.log('DEPS RESOLVING LOG:');
 rd(0, false);
 console.log();
-console.log('NORMALIZED EXT CONFIG: ', JSON.stringify(config.extensions, null, '\t'));
+var normalisedConfig = JSON.stringify(config, null, '\t');
+console.log('NORMALIZED EXT CONFIG: ', normalisedConfig);
+var fs = require('fs');
+fs.writeFileSync('config-normalised.json', normalisedConfig);
 console.log('EXTENSIONS INDEXES SEQUENCE IN CONFIG.EXTENSIONS[i]: ', JSON.stringify(extSequence, null, '\t'));
+console.log('EXTENSIONS INDEXES SEQUENCE LEN: ', extSequence.length);
 console.log('EXTENSIONS NAMES SEQUENCE: ', JSON.stringify(extSequenceNames, null, '\t'));
 
-clear();
-complexityMode = 0;
-console.log('\n\nCOMPLEXITY COMPARING')
-console.log('complexityMode === 0')
-normalizeDeps(0);
-rd(0, true);
-console.log('COMPLEXITY LEVEL: ', algorythmComplexity)
+var avgCompl1 = 0, avgCompl2 = 0;
+for (var repeats = 0; repeats < maxExperimentRepeats; repeats++){
+    process.stderr.write('\rWorking ' + getProgressChar());
+    clear();
+    complexityMode = 0;
+    normalizeDeps(0);
+    rd(0, true);
 
-var compl1 = algorythmComplexity;
+    avgCompl1 += algorithmComplexity;
 
-clear();
-console.log('\n\nCOMPLEXITY COMPARING')
-console.log('complexityMode === 1')
-complexityMode = 1;
-normalizeDeps(0);
-rd(0, true);
-console.log('COMPLEXITY LEVEL: ', algorythmComplexity)
-console.log('COMPLEXITY DIFFERENCE: ', 100 - parseInt(algorythmComplexity / compl1 * 100), '%')
+    clear();
+    complexityMode = 1;
+    normalizeDeps(0);
+    rd(0, true);
+
+    avgCompl2 += algorithmComplexity;
+}
+
+console.error('\n');
+
+var resultString = 'MODE_START_FROM_EXTENSIONS_GLOBAL_OFFSET ' +
+    '\nis SLOWER than ' +
+    '\nMODE_START_FROM_DEPENDENCY_INDEX ' +
+    '\nAverage up to: ' + (parseInt(avgCompl2 / avgCompl1 * 100) - 100) + '%';
+
+console.log(resultString);
+console.error(resultString);
