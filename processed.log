@@ -1,0 +1,447 @@
+~/tmp/ext $ node ttline.js 
+DEPS RESOLVING LOG:
+- CURRENT CURSOR:  extension4
+- DEPENDENCY NEED:  extension2
+- >> extension4 REGISTERED <<
+    - CURRENT CURSOR:  extension2
+    - DEPENDENCY NEED:  extension1
+    - >> extension2 REGISTERED <<
+        - CURRENT CURSOR:  extension3
+        - DEPENDENCY NEED:  extension6
+        - >> extension3 REGISTERED <<
+            - CURRENT CURSOR:  extension1
+            - DEPENDENCY NEED:  extension5
+            - >> extension1 REGISTERED <<
+                - CURRENT CURSOR:  extension5
+                - DEPENDENCY NEED:  extension3
+                - ALREADY REGISTERED! CONTINUE...
+                - CURRENT CURSOR:  extension7
+                - DEPENDENCY NEED:  extension2
+                - ALREADY REGISTERED! CONTINUE...
+                - CURRENT CURSOR:  extension6
+                - DEPENDENCY NEED:  extension4
+                - ALREADY REGISTERED! CONTINUE...
+                - DEPENDENCY NEED:  extension7
+                - ALREADY REGISTERED! CONTINUE...
+                - CURRENT CURSOR:  extension8
+                - DEPENDENCY NEED:  extension4
+                - ALREADY REGISTERED! CONTINUE...
+                - DEPENDENCY NEED:  extension6
+                - ALREADY REGISTERED! CONTINUE...
+                - DEPENDENCY NEED:  extension5
+                - ALREADY REGISTERED! CONTINUE...
+                - DEPENDENCY NEED:  extension9
+                - >> extension8 REGISTERED <<
+                    - CURRENT CURSOR:  extension9
+                    - DEPENDENCY NEED:  extension4
+                    - ALREADY REGISTERED! CONTINUE...
+                    - DEPENDENCY NEED:  extension6
+                    - ALREADY REGISTERED! CONTINUE...
+                    - DEPENDENCY NEED:  extension5
+                    - ALREADY REGISTERED! CONTINUE...
+                    - CURRENT CURSOR:  extension10
+                    - DEPENDENCY NEED:  extension6
+                    - ALREADY REGISTERED! CONTINUE...
+                    - DEPENDENCY NEED:  extension7
+                    - ALREADY REGISTERED! CONTINUE...
+                    - DEPENDENCY NEED:  extension8
+                    - ALREADY REGISTERED! CONTINUE...
+                    - DEPENDENCY NEED:  extension5
+                    - ALREADY REGISTERED! CONTINUE...
+                    - DEPENDENCY NEED:  extension4
+                    - ALREADY REGISTERED! CONTINUE...
+                    - DEPENDENCY NEED:  extension3
+                    - ALREADY REGISTERED! CONTINUE...
+                    - DEPENDENCY NEED:  extension2
+                    - ALREADY REGISTERED! CONTINUE...
+                    - DEPENDENCY NEED:  extension1
+                    - ALREADY REGISTERED! CONTINUE...
+                - CURRENT CURSOR:  extension9
+                - DEPENDENCY NEED:  extension4
+                - ALREADY REGISTERED! CONTINUE...
+                - DEPENDENCY NEED:  extension6
+                - ALREADY REGISTERED! CONTINUE...
+                - DEPENDENCY NEED:  extension5
+                - ALREADY REGISTERED! CONTINUE...
+                - CURRENT CURSOR:  extension10
+                - DEPENDENCY NEED:  extension6
+                - ALREADY REGISTERED! CONTINUE...
+                - DEPENDENCY NEED:  extension7
+                - ALREADY REGISTERED! CONTINUE...
+                - DEPENDENCY NEED:  extension8
+                - ALREADY REGISTERED! CONTINUE...
+                - DEPENDENCY NEED:  extension5
+                - ALREADY REGISTERED! CONTINUE...
+                - DEPENDENCY NEED:  extension4
+                - ALREADY REGISTERED! CONTINUE...
+                - DEPENDENCY NEED:  extension3
+                - ALREADY REGISTERED! CONTINUE...
+                - DEPENDENCY NEED:  extension2
+                - ALREADY REGISTERED! CONTINUE...
+                - DEPENDENCY NEED:  extension1
+                - ALREADY REGISTERED! CONTINUE...
+            - DEPENDENCY NEED:  extension7
+            - ALREADY REGISTERED! CONTINUE...
+            - DEPENDENCY NEED:  extension8
+            - ALREADY REGISTERED! CONTINUE...
+            - DEPENDENCY NEED:  extension9
+            - ALREADY REGISTERED! CONTINUE...
+            - CURRENT CURSOR:  extension5
+            - DEPENDENCY NEED:  extension3
+            - ALREADY REGISTERED! CONTINUE...
+            - CURRENT CURSOR:  extension7
+            - DEPENDENCY NEED:  extension2
+            - ALREADY REGISTERED! CONTINUE...
+            - CURRENT CURSOR:  extension6
+            - DEPENDENCY NEED:  extension4
+            - ALREADY REGISTERED! CONTINUE...
+            - DEPENDENCY NEED:  extension7
+            - ALREADY REGISTERED! CONTINUE...
+            - CURRENT CURSOR:  extension8
+            - DEPENDENCY NEED:  extension4
+            - ALREADY REGISTERED! CONTINUE...
+            - DEPENDENCY NEED:  extension6
+            - ALREADY REGISTERED! CONTINUE...
+            - DEPENDENCY NEED:  extension5
+            - ALREADY REGISTERED! CONTINUE...
+            - DEPENDENCY NEED:  extension9
+            - ALREADY REGISTERED! CONTINUE...
+            - CURRENT CURSOR:  extension9
+            - DEPENDENCY NEED:  extension4
+            - ALREADY REGISTERED! CONTINUE...
+            - DEPENDENCY NEED:  extension6
+            - ALREADY REGISTERED! CONTINUE...
+            - DEPENDENCY NEED:  extension5
+            - ALREADY REGISTERED! CONTINUE...
+            - CURRENT CURSOR:  extension10
+            - DEPENDENCY NEED:  extension6
+            - ALREADY REGISTERED! CONTINUE...
+            - DEPENDENCY NEED:  extension7
+            - ALREADY REGISTERED! CONTINUE...
+            - DEPENDENCY NEED:  extension8
+            - ALREADY REGISTERED! CONTINUE...
+            - DEPENDENCY NEED:  extension5
+            - ALREADY REGISTERED! CONTINUE...
+            - DEPENDENCY NEED:  extension4
+            - ALREADY REGISTERED! CONTINUE...
+            - DEPENDENCY NEED:  extension3
+            - ALREADY REGISTERED! CONTINUE...
+            - DEPENDENCY NEED:  extension2
+            - ALREADY REGISTERED! CONTINUE...
+            - DEPENDENCY NEED:  extension1
+            - ALREADY REGISTERED! CONTINUE...
+        - DEPENDENCY NEED:  extension8
+        - ALREADY REGISTERED! CONTINUE...
+        - CURRENT CURSOR:  extension1
+        - DEPENDENCY NEED:  extension5
+        - ALREADY REGISTERED! CONTINUE...
+        - DEPENDENCY NEED:  extension7
+        - ALREADY REGISTERED! CONTINUE...
+        - DEPENDENCY NEED:  extension8
+        - ALREADY REGISTERED! CONTINUE...
+        - DEPENDENCY NEED:  extension9
+        - ALREADY REGISTERED! CONTINUE...
+        - CURRENT CURSOR:  extension5
+        - DEPENDENCY NEED:  extension3
+        - ALREADY REGISTERED! CONTINUE...
+        - CURRENT CURSOR:  extension7
+        - DEPENDENCY NEED:  extension2
+        - ALREADY REGISTERED! CONTINUE...
+        - CURRENT CURSOR:  extension6
+        - DEPENDENCY NEED:  extension4
+        - ALREADY REGISTERED! CONTINUE...
+        - DEPENDENCY NEED:  extension7
+        - ALREADY REGISTERED! CONTINUE...
+        - CURRENT CURSOR:  extension8
+        - DEPENDENCY NEED:  extension4
+        - ALREADY REGISTERED! CONTINUE...
+        - DEPENDENCY NEED:  extension6
+        - ALREADY REGISTERED! CONTINUE...
+        - DEPENDENCY NEED:  extension5
+        - ALREADY REGISTERED! CONTINUE...
+        - DEPENDENCY NEED:  extension9
+        - ALREADY REGISTERED! CONTINUE...
+        - CURRENT CURSOR:  extension9
+        - DEPENDENCY NEED:  extension4
+        - ALREADY REGISTERED! CONTINUE...
+        - DEPENDENCY NEED:  extension6
+        - ALREADY REGISTERED! CONTINUE...
+        - DEPENDENCY NEED:  extension5
+        - ALREADY REGISTERED! CONTINUE...
+        - CURRENT CURSOR:  extension10
+        - DEPENDENCY NEED:  extension6
+        - ALREADY REGISTERED! CONTINUE...
+        - DEPENDENCY NEED:  extension7
+        - ALREADY REGISTERED! CONTINUE...
+        - DEPENDENCY NEED:  extension8
+        - ALREADY REGISTERED! CONTINUE...
+        - DEPENDENCY NEED:  extension5
+        - ALREADY REGISTERED! CONTINUE...
+        - DEPENDENCY NEED:  extension4
+        - ALREADY REGISTERED! CONTINUE...
+        - DEPENDENCY NEED:  extension3
+        - ALREADY REGISTERED! CONTINUE...
+        - DEPENDENCY NEED:  extension2
+        - ALREADY REGISTERED! CONTINUE...
+        - DEPENDENCY NEED:  extension1
+        - ALREADY REGISTERED! CONTINUE...
+    - DEPENDENCY NEED:  extension3
+    - ALREADY REGISTERED! CONTINUE...
+    - DEPENDENCY NEED:  extension8
+    - ALREADY REGISTERED! CONTINUE...
+    - DEPENDENCY NEED:  extension9
+    - ALREADY REGISTERED! CONTINUE...
+    - CURRENT CURSOR:  extension3
+    - DEPENDENCY NEED:  extension6
+    - ALREADY REGISTERED! CONTINUE...
+    - DEPENDENCY NEED:  extension8
+    - ALREADY REGISTERED! CONTINUE...
+    - CURRENT CURSOR:  extension1
+    - DEPENDENCY NEED:  extension5
+    - ALREADY REGISTERED! CONTINUE...
+    - DEPENDENCY NEED:  extension7
+    - ALREADY REGISTERED! CONTINUE...
+    - DEPENDENCY NEED:  extension8
+    - ALREADY REGISTERED! CONTINUE...
+    - DEPENDENCY NEED:  extension9
+    - ALREADY REGISTERED! CONTINUE...
+    - CURRENT CURSOR:  extension5
+    - DEPENDENCY NEED:  extension3
+    - ALREADY REGISTERED! CONTINUE...
+    - CURRENT CURSOR:  extension7
+    - DEPENDENCY NEED:  extension2
+    - ALREADY REGISTERED! CONTINUE...
+    - CURRENT CURSOR:  extension6
+    - DEPENDENCY NEED:  extension4
+    - ALREADY REGISTERED! CONTINUE...
+    - DEPENDENCY NEED:  extension7
+    - ALREADY REGISTERED! CONTINUE...
+    - CURRENT CURSOR:  extension8
+    - DEPENDENCY NEED:  extension4
+    - ALREADY REGISTERED! CONTINUE...
+    - DEPENDENCY NEED:  extension6
+    - ALREADY REGISTERED! CONTINUE...
+    - DEPENDENCY NEED:  extension5
+    - ALREADY REGISTERED! CONTINUE...
+    - DEPENDENCY NEED:  extension9
+    - ALREADY REGISTERED! CONTINUE...
+    - CURRENT CURSOR:  extension9
+    - DEPENDENCY NEED:  extension4
+    - ALREADY REGISTERED! CONTINUE...
+    - DEPENDENCY NEED:  extension6
+    - ALREADY REGISTERED! CONTINUE...
+    - DEPENDENCY NEED:  extension5
+    - ALREADY REGISTERED! CONTINUE...
+    - CURRENT CURSOR:  extension10
+    - DEPENDENCY NEED:  extension6
+    - ALREADY REGISTERED! CONTINUE...
+    - DEPENDENCY NEED:  extension7
+    - ALREADY REGISTERED! CONTINUE...
+    - DEPENDENCY NEED:  extension8
+    - ALREADY REGISTERED! CONTINUE...
+    - DEPENDENCY NEED:  extension5
+    - ALREADY REGISTERED! CONTINUE...
+    - DEPENDENCY NEED:  extension4
+    - ALREADY REGISTERED! CONTINUE...
+    - DEPENDENCY NEED:  extension3
+    - ALREADY REGISTERED! CONTINUE...
+    - DEPENDENCY NEED:  extension2
+    - ALREADY REGISTERED! CONTINUE...
+    - DEPENDENCY NEED:  extension1
+    - ALREADY REGISTERED! CONTINUE...
+- CURRENT CURSOR:  extension2
+- DEPENDENCY NEED:  extension1
+- ALREADY REGISTERED! CONTINUE...
+- DEPENDENCY NEED:  extension3
+- ALREADY REGISTERED! CONTINUE...
+- DEPENDENCY NEED:  extension8
+- ALREADY REGISTERED! CONTINUE...
+- DEPENDENCY NEED:  extension9
+- ALREADY REGISTERED! CONTINUE...
+- CURRENT CURSOR:  extension3
+- DEPENDENCY NEED:  extension6
+- ALREADY REGISTERED! CONTINUE...
+- DEPENDENCY NEED:  extension8
+- ALREADY REGISTERED! CONTINUE...
+- CURRENT CURSOR:  extension1
+- DEPENDENCY NEED:  extension5
+- ALREADY REGISTERED! CONTINUE...
+- DEPENDENCY NEED:  extension7
+- ALREADY REGISTERED! CONTINUE...
+- DEPENDENCY NEED:  extension8
+- ALREADY REGISTERED! CONTINUE...
+- DEPENDENCY NEED:  extension9
+- ALREADY REGISTERED! CONTINUE...
+- CURRENT CURSOR:  extension5
+- DEPENDENCY NEED:  extension3
+- ALREADY REGISTERED! CONTINUE...
+- CURRENT CURSOR:  extension7
+- DEPENDENCY NEED:  extension2
+- ALREADY REGISTERED! CONTINUE...
+- CURRENT CURSOR:  extension6
+- DEPENDENCY NEED:  extension4
+- ALREADY REGISTERED! CONTINUE...
+- DEPENDENCY NEED:  extension7
+- ALREADY REGISTERED! CONTINUE...
+- CURRENT CURSOR:  extension8
+- DEPENDENCY NEED:  extension4
+- ALREADY REGISTERED! CONTINUE...
+- DEPENDENCY NEED:  extension6
+- ALREADY REGISTERED! CONTINUE...
+- DEPENDENCY NEED:  extension5
+- ALREADY REGISTERED! CONTINUE...
+- DEPENDENCY NEED:  extension9
+- ALREADY REGISTERED! CONTINUE...
+- CURRENT CURSOR:  extension9
+- DEPENDENCY NEED:  extension4
+- ALREADY REGISTERED! CONTINUE...
+- DEPENDENCY NEED:  extension6
+- ALREADY REGISTERED! CONTINUE...
+- DEPENDENCY NEED:  extension5
+- ALREADY REGISTERED! CONTINUE...
+- CURRENT CURSOR:  extension10
+- DEPENDENCY NEED:  extension6
+- ALREADY REGISTERED! CONTINUE...
+- DEPENDENCY NEED:  extension7
+- ALREADY REGISTERED! CONTINUE...
+- DEPENDENCY NEED:  extension8
+- ALREADY REGISTERED! CONTINUE...
+- DEPENDENCY NEED:  extension5
+- ALREADY REGISTERED! CONTINUE...
+- DEPENDENCY NEED:  extension4
+- ALREADY REGISTERED! CONTINUE...
+- DEPENDENCY NEED:  extension3
+- ALREADY REGISTERED! CONTINUE...
+- DEPENDENCY NEED:  extension2
+- ALREADY REGISTERED! CONTINUE...
+- DEPENDENCY NEED:  extension1
+- ALREADY REGISTERED! CONTINUE...
+
+NORMALIZED EXT CONFIG:  [
+	{
+		"name": "extension4",
+		"dependencies": [
+			"extension2"
+		],
+		"module": "twee-extension4"
+	},
+	{
+		"name": "extension2",
+		"dependencies": [
+			"extension1",
+			"extension3",
+			"extension8",
+			"extension9"
+		],
+		"module": "twee-extension2"
+	},
+	{
+		"name": "extension3",
+		"module": "twee-extension3",
+		"dependencies": [
+			"extension6",
+			"extension8"
+		]
+	},
+	{
+		"name": "extension1",
+		"module": "twee-extension1",
+		"dependencies": [
+			"extension5",
+			"extension7",
+			"extension8",
+			"extension9"
+		]
+	},
+	{
+		"name": "extension5",
+		"module": "twee-extension5",
+		"dependencies": [
+			"extension3"
+		]
+	},
+	{
+		"name": "extension7",
+		"module": "twee-extension7",
+		"dependencies": [
+			"extension2"
+		]
+	},
+	{
+		"name": "extension6",
+		"module": "twee-extension6",
+		"dependencies": [
+			"extension4",
+			"extension7"
+		]
+	},
+	{
+		"name": "extension8",
+		"module": "twee-extension8",
+		"dependencies": [
+			"extension4",
+			"extension6",
+			"extension5",
+			"extension9"
+		]
+	},
+	{
+		"name": "extension9",
+		"module": "twee-extension9",
+		"dependencies": [
+			"extension4",
+			"extension6",
+			"extension5"
+		]
+	},
+	{
+		"name": "extension10",
+		"module": "twee-extension10",
+		"dependencies": [
+			"extension6",
+			"extension7",
+			"extension8",
+			"extension5",
+			"extension4",
+			"extension3",
+			"extension2",
+			"extension1"
+		]
+	}
+]
+EXTENSIONS INDEXES SEQUENCE IN CONFIG.EXTENSIONS[i]:  [
+	4,
+	5,
+	6,
+	8,
+	9,
+	7,
+	3,
+	2,
+	1,
+	0
+]
+EXTENSIONS NAMES SEQUENCE:  [
+	"extension5",
+	"extension7",
+	"extension6",
+	"extension9",
+	"extension10",
+	"extension8",
+	"extension1",
+	"extension3",
+	"extension2",
+	"extension4"
+]
+
+
+COMPLEXITY COMPARING
+complexityMode === 0
+COMPLEXITY LEVEL:  230
+
+
+COMPLEXITY COMPARING
+complexityMode === 1
+COMPLEXITY LEVEL:  184
+COMPLEXITY DIFFERENCE:  20 %
+~/tmp/ext $ 

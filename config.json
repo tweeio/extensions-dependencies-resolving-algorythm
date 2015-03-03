@@ -1,0 +1,102 @@
+{
+    "extensions": [
+        {
+            "name": "extension4",
+            "dependencies": [
+                "extension2"
+            ],
+            "module": "twee-extension4"
+        },
+        {
+            "name": "extension2",
+            "dependencies": [
+                "extension1"
+            ],
+            "module": "twee-extension2"
+        },
+        {
+            "name": "extension3",
+            "isDependencyFor": [
+                "extension2"
+            ],
+            "module": "twee-extension3"
+        },
+        {
+            "name": "extension1",
+            "module": "twee-extension1"
+        },
+        {
+            "name": "extension5",
+            "module": "twee-extension5",
+            "isDependencyFor": [
+                "extension1"
+            ],
+            "dependencies": [
+                "extension3"
+            ]
+        },
+        {
+            "name": "extension7",
+            "module": "twee-extension7",
+            "isDependencyFor": [
+                "extension1",
+                "extension6"
+            ],
+            "dependencies": [
+                "extension2"
+            ]
+        },
+        {
+            "name": "extension6",
+            "module": "twee-extension6",
+            "isDependencyFor": [
+                "extension3"
+            ],
+            "dependencies": [
+                "extension4"
+            ]
+        },
+        {
+            "name": "extension8",
+            "module": "twee-extension8",
+            "isDependencyFor": [
+                "extension3",
+                "extension2",
+                "extension1"
+            ],
+            "dependencies": [
+                "extension4",
+                "extension6",
+                "extension5"
+            ]
+        },
+        {
+            "name": "extension9",
+            "module": "twee-extension9",
+            "isDependencyFor": [
+                "extension8",
+                "extension2",
+                "extension1"
+            ],
+            "dependencies": [
+                "extension4",
+                "extension6",
+                "extension5"
+            ]
+        },
+        {
+            "name": "extension10",
+            "module": "twee-extension10",
+            "dependencies": [
+                "extension6",
+                "extension7",
+                "extension8",
+                "extension5",
+                "extension4",
+                "extension3",
+                "extension2",
+                "extension1"
+            ]
+        }
+    ]
+}
